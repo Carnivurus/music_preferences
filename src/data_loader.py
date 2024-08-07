@@ -1,8 +1,5 @@
 import pandas as pd
-import gdown
 
-
-
-# file = pd.read_csv('https://drive.google.com/file/d/1Fhfx8KGJYvYxWUrmTxPGbzehi-BXatpe/view?usp=drive_link')
-
-# print(file)
+def data_loader(file_id):
+    url = pd.read_csv(f'https://drive.google.com/uc?export=download&id={file_id}')
+    return url
