@@ -20,13 +20,13 @@ The analysis is conducted in three main stages: data description, data preproces
 
 Here is an overview of the project's file structure and the purpose of each file:
 
-├── README.md
-├── main.py
-└── src
-    ├── data_loader.py
-    ├── data_analysis.py
-    ├── data_preprocessing.py
-    └── hypothesis_testing.py
+- README.md
+- main.py
+- /src/
+    - data_loader.py
+    - data_analysis.py
+    - data_preprocessing.py
+    - hypothesis_testing.py
 
 - **`main.py`**: Main code which will execute the src files to process the data.
 - **`/src/`**: Folder containing Python scripts for specific tasks, such as:

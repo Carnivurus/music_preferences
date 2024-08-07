@@ -12,3 +12,5 @@ def data_analysis(data):
     print(f'Duplicated Rows:{duplicated_rows}')
     print(f'Null Rows:{null_rows}', end='\n')
     print(f'Null share: {(null_rows/data.shape[0]*100):.2f}%')
+    # data.sample(10)
+

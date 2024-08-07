@@ -4,8 +4,31 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-
 def eda_report(data, cols):
+    print('-----------------------------')
+    print('CHECKING VALUES')
+    check_values(data)
+    chart_plot(data, cols)
+    print('-----------------------------')
+    print('TOP TEN VALUES')
+    top_ten(data.iloc[:,1:])
+
+def check_values(data):
+    # Filtrar por no obj
+    for column in data.columns:
+        print(f'Values for {column}',end='\n')
+        print(data[column].value_counts())
+        print('-----------------------------')
+
+def top_ten(data):
+    for col in data.columns:
+        result = data[col].value_counts().head(10)
+        print('-----------------------------')
+        print(result)
+
+
+
+def chart_plot(data, cols):
     
     eda_path = './data/eda_results/'
 
