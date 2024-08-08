@@ -3,11 +3,13 @@ from src.data_loader import data_loader
 from src.data_analysis import data_analysis
 from src.data_preprocessing import preprocess_data
 from src.eda_report import eda_report, check_values, top_ten
+from src.hypothesis_testing import test_hypotheses_one
 
 file_id = '1Fhfx8KGJYvYxWUrmTxPGbzehi-BXatpe'
 
 # Loading data
 data = data_loader(file_id)
+data.sample(10)
 
 # Analyzing data
 data_analysis(data)
@@ -16,17 +18,9 @@ data_analysis(data)
 preprocessed_df = preprocess_data(data)
 
 # EDA
-cols = ['day', 'city']
-eda_report(preprocessed_df,cols)
-
-
-# data['time'] = pd.to_datetime(data['time'], format='%H:%M:%S').dt.time
-# data.select_dtypes(exclude='number')
-
+# cols = ['day', 'city']
+# eda_report(preprocessed_df,cols)
 
 # Hypothesis
-
-# pd.pivot_table(data,values='track',index='city', columns='day', aggfunc='count')
-
-
+uno, dos= test_hypotheses_one(preprocessed_df)
 
