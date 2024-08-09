@@ -41,7 +41,7 @@ def chart_plot(data, cols):
 # Plotting categoric cols
 
     num_height = math.ceil(len(cols)/2)
-    fig1, axes = plt.subplots(num_height, 2, figsize=(12,12))
+    fig1, axes = plt.subplots(num_height, 2, figsize=(6,3))
 
     # for col, ax in zip(cols)
 
