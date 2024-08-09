@@ -43,5 +43,14 @@ Here is an overview of the project's file structure and the purpose of each file
 
 To install the required dependencies, run the following command in your terminal:
 
-```bash
+# python 3.11.9 (recommended)
+
+Installation with pip
+```bash ()
 pip install -r requirements.txt
+```
+
+Installation with conda (yml)
+``` bash ()
+conda env create -f environment.yml
+```

@@ -1,4 +1,3 @@
-import pandas as pd
 from src.data_loader import data_loader
 from src.data_analysis import data_analysis
 from src.data_preprocessing import preprocess_data

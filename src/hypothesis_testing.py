@@ -78,7 +78,7 @@ def test_hypothesis_one(data):
             print('Null hypothesis rejected')
         else:
             print('Cannot reject null hypothesis')
-    return pivot_table, t_test_results
+    # return pivot_table, t_test_results
 
 def test_hypothesis_two(data):
     '''

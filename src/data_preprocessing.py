@@ -1,7 +1,8 @@
 import pandas as pd
 
-
 def clean_column_names(data):
+    '''Function created to perform a general clean of the column names
+    from a DataFrame (lower, strip and replace)'''
     # 
     data.columns = (data.columns
                         .str.lower()
@@ -11,6 +12,8 @@ def clean_column_names(data):
     return data
 
 def preprocess_data(data):
+    '''This function will receive a DataFrame to perform a preprocessing, normalizing
+    the column names, dropping duplicates and Null values, the output will be in a DataFrame format'''
     # Normalizing columns
     clean_columns_df = clean_column_names(data)
     # Dropping duplicates

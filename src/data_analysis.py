@@ -1,6 +1,13 @@
-import pandas as pd
 
 def data_analysis(data):
+    '''This function will receive a dataframe to be analized, 
+    showing to the following variables:
+    - General info about the DataFrame (data types, count, etc.)
+    - Column Names
+    - Number of duplicated rows
+    - Number of null rows
+    - Percentage of rows with null values
+    '''
 
     duplicated_rows = data.duplicated().sum()
     null_rows = data.isnull().any(axis=1).sum()
